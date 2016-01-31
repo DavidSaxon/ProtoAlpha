@@ -2,3 +2,7 @@ CMakeFiles
 CMakeCache.txt
 Makefile
 cmake_install.cmake
+
+Release
+ProtoAlpha.vcxproj
+ProtoAlpha.vcxproj.filters
