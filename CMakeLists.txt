@@ -1,19 +1,24 @@
 cmake_minimum_required( VERSION 2.6 )
 project( ProtoAlpha )
 
+set( CMAKE_AUTOMOC ON )
+
+set( AUTOMOC_TARGETS_FOLDER ${CMAKE_BINARY_DIR}/gen/cpp )
+
 set( SRC
 
     src/alpha/Main.cpp
+    src/alpha/internal/qt/Window.cpp
 )
-
-set( BASEPATH "${CMAKE_SOURCE_DIR}" )
 
 set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build/linux_x86 )
 
+set( BASEPATH "${CMAKE_SOURCE_DIR}" )
+
 set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++0x" )
 
+
 include_directories(
-        "${BASEPATH}"
         ${INCLUDE_DIRECTORIES}
         ${CMAKE_BINARY_DIR}/ext/ChaosCore/include/
         src/
@@ -28,7 +33,9 @@ link_directories(
         ${CMAKE_BINARY_DIR}/ext/ChaosCore/lib
 )
 
+
 add_executable( ProtoAlpha ${SRC} )
+
 
 target_link_libraries( ProtoAlpha
     chaoscore_base
@@ -37,3 +44,4 @@ target_link_libraries( ProtoAlpha
     Qt5::Gui
     Qt5::Widgets
 )
+

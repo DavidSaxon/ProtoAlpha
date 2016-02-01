@@ -4,3 +4,8 @@ Makefile
 cmake_install.cmake
 
 Release
+
+
+# moc
+ProtoAlpha_automoc.cpp
+moc_*.cpp
