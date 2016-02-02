@@ -10,9 +10,7 @@
     <ClCompile Include="src\alpha\Main.cpp">
       <Filter>src\alpha</Filter>
     </ClCompile>
-    <ClCompile Include="gen\cpp\**">
-      <Filter>gen\cpp</Filter>
-    </ClCompile>
+    <ClCompile Include="gen\cpp\moc_Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
